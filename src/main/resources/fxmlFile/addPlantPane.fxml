@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPlantPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1150.0" style="-fx-background-color: #d6d6d6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddPlantController">
+   <children>
+      <Label layoutX="400.0" layoutY="135.0" prefHeight="45.0" prefWidth="350.0" text="Podaj optymalne parametry rośliny" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbName" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="235.0" prefHeight="29.0" prefWidth="320.0" text="Nazwa rośliny:" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="375.0" layoutY="294.0" prefHeight="29.0" prefWidth="274.0" text="Temperatura:" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="375.0" layoutY="353.0" prefHeight="29.0" prefWidth="279.0" text="Natężenie światła:" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="375.0" layoutY="411.0" prefHeight="29.0" prefWidth="274.0" text="Wilgotność powietrza:" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="375.0" layoutY="469.0" prefHeight="29.0" prefWidth="277.0" text="Wilgotność gleby:" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfName" layoutX="644.0" layoutY="237.0" />
+      <TextField fx:id="tfTemperature" layoutX="644.0" layoutY="296.0" onKeyReleased="#checkTemperatureValue" onMouseClicked="#clickedMouse" />
+      <TextField fx:id="tfLightIntensity" layoutX="644.0" layoutY="355.0" onKeyReleased="#checkLightIntensityValue" />
+      <TextField fx:id="tfAirMoisture" layoutX="644.0" layoutY="413.0" onKeyReleased="#checkAirMoistureValue" />
+      <TextField fx:id="tfSoilMoisture" layoutX="644.0" layoutY="471.0" onKeyReleased="#checkSoilMoistureValue" />
+      <Button fx:id="btAdd" layoutX="950.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="45.0" prefWidth="100.0" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEdit" layoutX="950.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickEdit" prefHeight="45.0" prefWidth="100.0" text="Edytuj" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbPaneInfo" layoutX="469.0" layoutY="45.0" prefHeight="45.0" prefWidth="250.0" text="Dodaj roślinę" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btUndo" layoutX="100.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickUndo" prefHeight="45.0" prefWidth="100.0" text="Cofnij" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbInfo" alignment="CENTER" layoutX="375.0" layoutY="600.0" minWidth="400.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="cbPlantSelect" layoutX="500.0" layoutY="110.0" onAction="#clickTest" prefWidth="150.0" />
+      <Button layoutX="831.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickMinusTemperature" text="-" />
+      <Button layoutX="862.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickPlusTemperature" text="+" />
+      <Button layoutX="862.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickPlusLightIntensity" text="+" />
+      <Button layoutX="831.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickMinusLightIntensity" text="-" />
+      <Button layoutX="831.0" layoutY="413.0" mnemonicParsing="false" onAction="#clickMinusAirMoisture" text="-" />
+      <Button layoutX="831.0" layoutY="471.0" mnemonicParsing="false" onAction="#clickMinusSoilMoisture" text="-" />
+      <Button layoutX="862.0" layoutY="413.0" mnemonicParsing="false" onAction="#clickPlusAirMoisture" text="+" />
+      <Button layoutX="862.0" layoutY="471.0" mnemonicParsing="false" onAction="#clickPlusSoilMoisture" text="+" />
+   </children>
+</AnchorPane>

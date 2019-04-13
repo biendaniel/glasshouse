@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPlantPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1150.0" style="-fx-background-color: #d6d6d6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddControllerController">
+   <children>
+      <Button fx:id="btAdd" layoutX="950.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="45.0" prefWidth="100.0" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEdit" layoutX="950.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickEdit" prefHeight="45.0" prefWidth="100.0" text="Edytuj" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbPaneInfo" alignment="CENTER" layoutX="342.0" layoutY="44.0" prefHeight="45.0" prefWidth="466.0" text="Dodaj Sterownik" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="btUndo" layoutX="100.0" layoutY="620.0" mnemonicParsing="false" onAction="#clickUndo" prefHeight="45.0" prefWidth="100.0" text="Cofnij" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbInfo" layoutX="561.0" layoutY="612.0" text="" />
+      <ComboBox fx:id="cbControllerSelect" layoutX="500.0" layoutY="110.0" onAction="#clickSelectController" prefWidth="150.0" />
+      <ComboBox fx:id="cbCheckPlace" layoutX="500.0" layoutY="306.0" onAction="#clickSelectPlace" prefWidth="150.0" />
+      <ComboBox fx:id="cbCheckPlant" layoutX="500.0" layoutY="429.0" onAction="#clickSelectPlant" prefWidth="150.0" />
+      <Label layoutX="393.0" layoutY="392.0" text="Wybierz roślinę, dla której sterownik ma dostosowywać warunki" />
+      <Label layoutX="534.0" layoutY="278.0" text="Wybierz obszar" />
+   </children>
+</AnchorPane>
